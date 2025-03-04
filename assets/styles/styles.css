@@ -1,0 +1,175 @@
+:root {
+    --primary-color: rgb(33, 133, 208);
+    --primary-color-transparent: rgba(33, 133, 208, 0.5);
+    --secondary-color: rgb(255, 175, 56);
+    --black-transparent: rgba(0, 0, 0, 0.7);
+    --background-color-grey: rgb(240, 240, 240);
+    --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    --main-font: 'Roboto', sans-serif;
+    --width-funny: calc(100% / 3);
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: var(--main-font);
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    header {
+        color: white;
+        background-image:   linear-gradient(rgba(0, 0, 0, 0.5), rgba(54, 155, 205, 0.5)),
+                            url("../images/header_image.avif");
+        nav {
+            display: flex;
+            padding: 1rem;
+            justify-content: space-around;
+            img {
+                width: 110px;
+                height: 90px;
+                padding: 1rem;
+            }
+            ul {
+                li {
+                    display: inline-block;
+                    list-style-type: none;
+                    padding: 1rem;
+                }
+                
+                li:nth-of-type(3) {
+                        background-color: var(--primary-color);
+                        padding: 0.5rem;
+                    }
+                
+            }
+
+        }
+        hgroup {
+            padding-bottom: 6rem;
+            h1 {
+                margin: 0;
+                font-size: 6rem;
+                font-style: italic;
+                font-weight: 999;
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+    main {
+        div:first-child {
+            display: flex;
+            flex-wrap: wrap;
+            article {
+                width: 50%;
+                padding: 2rem 0;
+                img {
+                    width: 3rem;
+                }
+            }
+            article:first-child {
+                    background-color: var(--background-color-grey);
+            }
+            article:last-child {
+                background-color: var(--background-color-grey);
+            }
+        }
+        section#ourMissionYourExploration {
+            hgroup {
+                padding: 3rem;
+            }
+            ul {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                li {
+                    width: var(--width-funny);
+                    list-style-type: none;
+                    border: 1px solid rgba(211,211,211,0.6);
+                    article {
+                        margin: 2rem;
+                        img {
+                            width: 3rem;
+                        }
+                    }
+                }
+                li:first-child {
+                    border-right: none;
+                }
+                li:last-child {
+                    border-left: none;
+                }
+            }
+        }
+        div:nth-of-type(2) {
+            margin: -5rem 10% 0;
+            display: flex;
+            justify-content: center;
+            @media(max-width: 650px) {
+                flex-direction: column;
+            }
+            article {
+                background-size: cover;
+                color: white;
+                padding: 4rem;
+            }
+            article:first-child {
+                background-image:   linear-gradient(var(--black-transparent),var(--black-transparent)),
+                                    url(../images/item1.avif);
+            }
+            article:last-child {
+                background-image:   linear-gradient(var(--primary-color-transparent),var(--primary-color-transparent)),
+                                    url(../images/item2.avif);
+            }
+        }
+        section#exploreDifferently {
+            color: white;
+            border-bottom: 10px solid var(--primary-color);
+            background-image:   linear-gradient(var(--primary-color-transparent), var(--primary-color-transparent)),
+                                url("../images/main_image.avif");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: right;
+            div {
+                margin: 2rem;
+                width: 40%;
+                text-align: left;
+                p, a{
+                    margin: 1rem 0 1rem 4rem;
+                }
+                a {
+                    background-color: var(--primary-color);
+                    padding: 0.5rem;
+                }
+                
+            }
+            
+        }
+    }
+    footer {
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        div {
+            width: 30%;
+            margin: 3rem;
+            text-align: left;
+            img {
+                width: 5rem;
+            }
+            address {
+                font-style: normal;
+                h2 {
+                    font-size: 1rem;
+                    margin: 0;
+                }
+            }
+        }
+
+    }
+}
